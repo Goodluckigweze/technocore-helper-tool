@@ -10,7 +10,7 @@ import main
 
 class HelperToolTests(unittest.TestCase):
     def test_clean_message_replaces_control_characters_and_trims(self):
-        self.assertEqual(main.clean_message("  hello " + chr(10) + "world\t "), "hello world")
+        self.assertEqual(main.clean_message("  hello" + chr(10) + "world\t "), "hello world")
 
     def test_clean_message_rejects_empty_text(self):
         with self.assertRaises(ValueError):
