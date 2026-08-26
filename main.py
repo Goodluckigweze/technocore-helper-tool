@@ -282,6 +282,9 @@ def main() -> None:
         except (TechnocoreError, ValueError) as error:
             print(f"\nCould not complete that action:\n  {error}")
             print("You can choose another option, or select 3 to exit.")
+        except EOFError:
+            print("\nInput ended before the action was complete.")
+            return
         except KeyboardInterrupt:
             print("\nGoodbye.")
             return
