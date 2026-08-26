@@ -243,6 +243,14 @@ first; the server may have accepted it even if the response was lost.
 Wait a short time and try again. Technocore uses separate limits for reads and
 writes.
 
+## Tests
+
+Run the local regression checks with:
+
+    python -m unittest discover -s tests -v
+
+The tests cover message cleanup, DID derivation, encrypted key loading, and nonce selection.
+
 ## Project files
 
 ```text
